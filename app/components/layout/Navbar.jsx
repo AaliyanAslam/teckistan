@@ -189,8 +189,8 @@ export default function TeckistanNav() {
         <div className="max-w-[1260px] mx-auto h-full px-5 sm:px-8 flex items-center justify-between gap-6">
 
           {/* ── LOGO ──────────────────────────────── */}
-          <a ref={logoRef} href="#home" className="flex items-center gap-3 flex-shrink-0">
-            <div className="relative flex items-center justify-center w-[38px] h-[38px] rounded-[10px] flex-shrink-0"
+          <a ref={logoRef} href="#home" className="flex items-center gap-3 shrink-0">
+            <div className="relative flex items-center justify-center w-[38px] h-[38px] rounded-[10px] shrink-0"
                  style={{ background: "linear-gradient(135deg,#036083 0%,#047fab 100%)" }}>
               <span className="pulse-ring absolute inset-0 rounded-[10px]"
                     style={{ border: "2px solid rgba(3,96,131,.5)" }} />
@@ -227,7 +227,7 @@ export default function TeckistanNav() {
           </ul>
 
           {/* ── RIGHT ─────────────────────────────── */}
-          <div className="flex items-center gap-3 flex-shrink-0">
+          <div className="flex items-center gap-3 shrink-0">
 
             {/* CTA Button */}
             <a
@@ -285,7 +285,7 @@ export default function TeckistanNav() {
         {/* Drawer header */}
         <div className="flex items-center justify-between px-5 py-4 border-b" style={{ borderColor: "rgba(3,96,131,.09)" }}>
           <a href="#home" onClick={() => setMenuOpen(false)} className="flex items-center gap-2.5">
-            <div className="flex items-center justify-center w-8 h-8 rounded-[8px]"
+            <div className="flex items-center justify-center w-8 h-8 rounded-lg"
                  style={{ background: "linear-gradient(135deg,#036083,#047fab)" }}>
               <Zap size={15} color="#fff" fill="#fff" />
             </div>
@@ -296,7 +296,7 @@ export default function TeckistanNav() {
           </a>
           <button
             onClick={() => setMenuOpen(false)}
-            className="flex items-center justify-center w-8 h-8 rounded-[8px] cursor-pointer transition-colors"
+            className="flex items-center justify-center w-8 h-8 rounded-lg cursor-pointer transition-colors"
             style={{ background: "rgba(3,96,131,.07)" }}
           >
             <X size={16} color="#036083" strokeWidth={2.2} />
@@ -305,7 +305,7 @@ export default function TeckistanNav() {
 
         {/* Nav label */}
         <div className="px-5 pt-5 pb-2">
-          <p className="text-[10.5px] font-[700] tracking-[0.12em] uppercase" style={{ color: "rgba(3,96,131,.45)" }}>
+          <p className="text-[10.5px] font-bold tracking-[0.12em] uppercase" style={{ color: "rgba(3,96,131,.45)" }}>
             Navigation
           </p>
         </div>
@@ -322,7 +322,7 @@ export default function TeckistanNav() {
               >
                 {/* Icon box */}
                 <span
-                  className="drawer-icon flex items-center justify-center w-9 h-9 rounded-[9px] flex-shrink-0 transition-colors"
+                  className="drawer-icon flex items-center justify-center w-9 h-9 rounded-[9px] shrink-0 transition-colors"
                   style={{ background: activeLink === label ? "#036083" : "#f0f4f8" }}
                 >
                   <Icon size={16} color={activeLink === label ? "#fff" : "#6b7280"} strokeWidth={2} />
@@ -344,7 +344,7 @@ export default function TeckistanNav() {
           <a
             href="#contact"
             onClick={() => setMenuOpen(false)}
-            className="cta-btn flex items-center justify-center gap-2.5 text-white font-[700] text-[14.5px] py-[14px] rounded-[13px] relative overflow-hidden"
+            className="cta-btn flex items-center justify-center gap-2.5 text-white font-bold text-[14.5px] py-3.5 rounded-[13px] relative overflow-hidden"
             style={{
               background: "linear-gradient(135deg,#036083 0%,#047fab 100%)",
               boxShadow: "0 4px 24px rgba(3,96,131,.32)",
@@ -357,7 +357,7 @@ export default function TeckistanNav() {
           </a>
 
           {/* Social proof micro line */}
-          <p className="text-center text-[11.5px] font-[500] text-gray-400 mt-3">
+          <p className="text-center text-[11.5px] font-medium text-gray-400 mt-3">
             500+ websites delivered worldwide
           </p>
         </div>
