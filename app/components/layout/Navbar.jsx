@@ -186,11 +186,11 @@ export default function TeckistanNav() {
         {/* Top accent line */}
         <div className="nav-accent" />
 
-        <div className="max-w-[1260px] mx-auto h-full px-5 sm:px-8 flex items-center justify-between gap-6">
+        <div className="max-w-315 mx-auto h-full px-5 sm:px-8 flex items-center justify-between gap-6">
 
           {/* ── LOGO ──────────────────────────────── */}
           <a ref={logoRef} href="#home" className="flex items-center gap-3 shrink-0">
-            <div className="relative flex items-center justify-center w-[38px] h-[38px] rounded-[10px] shrink-0"
+            <div className="relative flex items-center justify-center w-9.5 h-9.5 rounded-[10px] shrink-0"
                  style={{ background: "linear-gradient(135deg,#036083 0%,#047fab 100%)" }}>
               <span className="pulse-ring absolute inset-0 rounded-[10px]"
                     style={{ border: "2px solid rgba(3,96,131,.5)" }} />
@@ -216,7 +216,7 @@ export default function TeckistanNav() {
                   onClick={() => setActiveLink(label)}
                   onMouseEnter={() => hoverLink(i, "in")}
                   onMouseLeave={() => hoverLink(i, "out")}
-                  className={`nav-link relative flex items-center px-[14px] py-2 rounded-[9px] text-[14px] font-[600] transition-colors duration-150
+                  className={`nav-link relative flex items-center px-3.5 py-2 rounded-[9px] text-[14px] font-semibold transition-colors duration-150
                     ${activeLink === label ? "is-active" : "text-gray-500 hover:text-gray-800 hover:bg-gray-50"}`}
                 >
                   {label}
@@ -235,7 +235,7 @@ export default function TeckistanNav() {
               href="#contact"
               onMouseEnter={() => hoverCta("in")}
               onMouseLeave={() => hoverCta("out")}
-              className="cta-btn hidden sm:inline-flex items-center gap-2 text-white font-[700] text-[13.5px] px-5 py-[10px] rounded-[10px] relative overflow-hidden"
+              className="cta-btn hidden sm:inline-flex items-center gap-2 text-white font-bold text-[13.5px] px-5 py-2.5 rounded-[10px] relative overflow-hidden"
               style={{
                 background: "linear-gradient(135deg,#036083 0%,#047fab 100%)",
                 boxShadow: "0 2px 18px rgba(3,96,131,.3)",

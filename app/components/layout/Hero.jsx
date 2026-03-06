@@ -223,11 +223,11 @@ export default function TeckistanHero() {
           borderBottom: scrolled ? "none" : "1px solid rgba(3,96,131,.08)"
         }}
       >
-        <div className="max-w-[1240px] mx-auto h-full px-6 flex items-center justify-between gap-8">
+        <div className="max-w-310 mx-auto h-full px-6 flex items-center justify-between gap-8">
 
           {/* Logo */}
-          <a ref={logoRef} href="#home" className="flex items-center gap-3 flex-shrink-0">
-            <div className="relative flex items-center justify-center w-9 h-9 rounded-[10px] flex-shrink-0"
+          <a ref={logoRef} href="#home" className="flex items-center gap-3 shrink-0">
+            <div className="relative flex items-center justify-center w-9 h-9 rounded-[10px] shrink-0"
                  style={{ background: "linear-gradient(135deg, #036083 0%, #047fab 100%)" }}>
               <span className="pulse-ring absolute inset-0 rounded-[10px]" style={{ border: "2px solid rgba(3,96,131,.5)" }} />
               <Zap size={18} className="text-white relative z-10" fill="white" />
@@ -248,7 +248,7 @@ export default function TeckistanHero() {
                   onClick={() => setActiveLink(label)}
                   onMouseEnter={() => hoverLink(i, "in")}
                   onMouseLeave={() => hoverLink(i, "out")}
-                  className={`nav-link relative flex items-center px-4 py-2 rounded-[9px] text-[14.5px] font-[600] transition-colors duration-150
+                  className={`nav-link relative flex items-center px-4 py-2 rounded-[9px] text-[14.5px] font-bold transition-colors duration-150
                     ${activeLink === label ? "active-link" : "text-gray-500 hover:text-gray-800 hover:bg-gray-50"}`}
                 >
                   {label}
@@ -259,7 +259,7 @@ export default function TeckistanHero() {
           </ul>
 
           {/* Right */}
-          <div className="flex items-center gap-3 flex-shrink-0">
+          <div className="flex items-center gap-3 shrink-0">
             <a
               ref={ctaRef}
               href="#contact"
@@ -294,9 +294,9 @@ export default function TeckistanHero() {
           {NAV_LINKS.map(({ label, href, icon: Icon }, i) => (
             <li key={label} ref={el => drawerItems.current[i] = el}>
               <a href={href} onClick={() => { setActiveLink(label); setMenuOpen(false); }}
-                 className={`drawer-link flex items-center gap-3 px-4 py-3.5 rounded-[11px] font-[600] text-[15px] mb-0.5
+                 className={`drawer-link flex items-center gap-3 px-4 py-3.5 rounded-[11px] font-semibold text-[15px] mb-0.5
                    ${activeLink === label ? "text-[#036083] bg-[#e0f2f9]" : "text-gray-600"}`}>
-                <span className="flex items-center justify-center w-8 h-8 rounded-[8px]"
+                <span className="flex items-center justify-center w-8 h-8 font-extrabold"
                       style={{ background: activeLink === label ? "#036083" : "#f3f4f6" }}>
                   <Icon size={16} color={activeLink === label ? "#fff" : "#6b7280"} strokeWidth={2} />
                 </span>
@@ -309,7 +309,7 @@ export default function TeckistanHero() {
         <div ref={el => drawerItems.current[5] = el} className="px-3 pb-4 pt-1">
           <div className="h-px mb-3" style={{ background: "rgba(3,96,131,.08)" }} />
           <a href="#contact" onClick={() => setMenuOpen(false)}
-             className="cta-primary shimmer-btn flex items-center justify-center gap-2.5 text-white font-bold text-[15px] py-3.5 rounded-[12px] relative overflow-hidden">
+             className="cta-primary shimmer-btn flex items-center justify-center gap-2.5 text-white font-bold text-[15px] py-3.5 rounded-xl relative overflow-hidden">
             <Globe size={17} /> Get Website <ArrowRight size={16} strokeWidth={2.5} />
           </a>
         </div>
@@ -335,17 +335,17 @@ export default function TeckistanHero() {
                border: "1px solid rgba(3,96,131,.07)" }} />
 
         {/* Top accent line */}
-        <div className="absolute top-0 left-0 right-0 h-[2px] pointer-events-none"
+        <div className="absolute top-0 left-0 right-0 h-0.5 pointer-events-none"
              style={{ background: "linear-gradient(90deg, transparent, #036083, transparent)" }} />
 
-        <div className="relative z-10 max-w-[1240px] mx-auto px-6 py-20 w-full">
+        <div className="relative z-10 max-w-310 mx-auto px-6 py-20 w-full">
           <div className="flex flex-col xl:flex-row items-center gap-16 xl:gap-12">
 
             {/* ── LEFT COPY ─────────────────────────── */}
-            <div className="flex-1 max-w-[600px] xl:max-w-none">
+            <div className="flex-1 max-w-150 xl:max-w-none">
 
               {/* Badge */}
-              <div ref={badgeRef} className="float-badge inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-7 font-[700] text-[12px] tracking-widest uppercase"
+              <div ref={badgeRef} className="float-badge inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-7 font-bold text-[12px] tracking-widest uppercase"
                    style={{ background: "linear-gradient(135deg, #e0f2f9 0%, #cceaf5 100%)", color: "#036083",
                      border: "1px solid rgba(3,96,131,.2)", boxShadow: "0 2px 12px rgba(3,96,131,.1)" }}>
                 <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "#036083" }} />
@@ -369,24 +369,24 @@ export default function TeckistanHero() {
               </h1>
 
               {/* Subheadline */}
-              <p ref={subRef} className="text-gray-500 font-[450] leading-relaxed mb-10 max-w-[500px]"
+              <p ref={subRef} className="text-gray-500 font-[450] leading-relaxed mb-10 max-w-125"
                  style={{ fontSize: "clamp(15px, 2vw, 18px)" }}>
-                We design <strong className="font-[700] text-gray-700">modern, fast</strong> and{" "}
-                <strong className="font-[700] text-gray-700">high-converting</strong> websites for businesses worldwide —
+                We design <strong className="font-bold text-gray-700">modern, fast</strong> and{" "}
+                <strong className="font-bold text-gray-700">high-converting</strong> websites for businesses worldwide —
                 built to grow your revenue from day one.
               </p>
 
               {/* CTAs */}
               <div ref={btnsRef} className="flex flex-wrap items-center gap-4 mb-12">
                 <a href="#contact"
-                   className="cta-primary shimmer-btn inline-flex items-center gap-2.5 text-white font-[800] px-7 py-4 rounded-[13px] relative overflow-hidden"
+                   className="cta-primary shimmer-btn inline-flex items-center gap-2.5 text-white font-extrabold px-7 py-4 rounded-[13px] relative overflow-hidden"
                    style={{ fontSize: 16 }}>
                   <Globe size={18} />
                   Get Landing Page — $99
                   <ArrowRight size={16} strokeWidth={2.8} />
                 </a>
                 <a href="#portfolio"
-                   className="cta-secondary inline-flex items-center gap-2 font-[700] px-6 py-4 rounded-[13px]"
+                   className="cta-secondary inline-flex items-center gap-2 font-bold px-6 py-4 rounded-[13px]"
                    style={{ fontSize: 15 }}>
                   <Play size={15} fill="#036083" />
                   View Portfolio
@@ -402,8 +402,8 @@ export default function TeckistanHero() {
                       <Icon size={14} color="#036083" strokeWidth={2.2} />
                     </span>
                     <div>
-                      <div className="font-[700] text-[13px] text-gray-800 leading-none mb-0.5">{label}</div>
-                      <div className="text-[11px] font-[500] text-gray-400">{sub}</div>
+                      <div className="font-bold text-[13px] text-gray-800 leading-none mb-0.5">{label}</div>
+                      <div className="text-[11px] font-medium text-gray-400">{sub}</div>
                     </div>
                     <CheckCircle2 size={14} color="#036083" className="ml-1 opacity-70" />
                   </div>
@@ -412,7 +412,7 @@ export default function TeckistanHero() {
             </div>
 
             {/* ── RIGHT VISUAL ──────────────────────── */}
-            <div className="flex-1 flex items-center justify-center relative w-full xl:max-w-[560px]">
+            <div className="flex-1 flex items-center justify-center relative w-full xl:max-w-140">
 
               {/* Glow behind laptop */}
               <div className="absolute inset-0 pointer-events-none"
@@ -420,31 +420,31 @@ export default function TeckistanHero() {
 
               {/* Stat cards — floating */}
               <div ref={el => statsRef.current[0] = el}
-                   className="stat-card absolute flex items-center gap-2.5 px-3.5 py-2.5 rounded-[12px] z-20 hidden sm:flex"
+                   className="stat-card absolute  items-center gap-2.5 px-3.5 py-2.5 rounded-xl z-20 hidden sm:flex"
                    style={{ top: "8%", left: "-4%" }}>
-                <div className="w-8 h-8 rounded-[8px] flex items-center justify-center" style={{ background: "#e0f2f9" }}>
+                <div className="w-8 h-8 font-extrabold flex items-center justify-center" style={{ background: "#e0f2f9" }}>
                   <TrendingUp size={16} color="#036083" />
                 </div>
                 <div>
-                  <div className="font-[800] text-[15px] text-gray-900 leading-none">+340%</div>
-                  <div className="text-[11px] font-[500] text-gray-400 mt-0.5">Avg. Traffic Boost</div>
+                  <div className="font-extrabold text-[15px] text-gray-900 leading-none">+340%</div>
+                  <div className="text-[11px] font-medium text-gray-400 mt-0.5">Avg. Traffic Boost</div>
                 </div>
               </div>
 
               <div ref={el => statsRef.current[1] = el}
-                   className="stat-card absolute flex items-center gap-2.5 px-3.5 py-2.5 rounded-[12px] z-20 hidden sm:flex"
+                   className="stat-card absolute  items-center gap-2.5 px-3.5 py-2.5 rounded-xl z-20 hidden sm:flex"
                    style={{ bottom: "14%", right: "-2%" }}>
-                <div className="w-8 h-8 rounded-[8px] flex items-center justify-center" style={{ background: "#e0f2f9" }}>
+                <div className="w-8 h-8 font-extrabold flex items-center justify-center" style={{ background: "#e0f2f9" }}>
                   <Shield size={16} color="#036083" />
                 </div>
                 <div>
-                  <div className="font-[800] text-[15px] text-gray-900 leading-none">500+</div>
-                  <div className="text-[11px] font-[500] text-gray-400 mt-0.5">Sites Delivered</div>
+                  <div className="font-extrabold text-[15px] text-gray-900 leading-none">500+</div>
+                  <div className="text-[11px] font-medium text-gray-400 mt-0.5">Sites Delivered</div>
                 </div>
               </div>
 
               <div ref={el => statsRef.current[2] = el}
-                   className="stat-card absolute flex items-center gap-2 px-3 py-2 rounded-[10px] z-20 hidden md:flex"
+                   className="stat-card absolute  items-center gap-2 px-3 py-2 rounded-[10px] z-20 hidden md:flex"
                    style={{ bottom: "40%", left: "-6%" }}>
                 <div className="flex -space-x-1.5">
                   {["#036083","#047fab","#059dc5"].map((c,i) => (
@@ -454,7 +454,7 @@ export default function TeckistanHero() {
                     </div>
                   ))}
                 </div>
-                <div className="text-[11px] font-[700] text-gray-700">
+                <div className="text-[11px] font-bold text-gray-700">
                   4.9 <Star size={9} fill="#f59e0b" color="#f59e0b" className="inline" /> (128 reviews)
                 </div>
               </div>
