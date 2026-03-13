@@ -311,7 +311,7 @@ export default function ModernFooter() {
           </div>
 
           {/* ── FOOTER BODY ── */}
-          <div className="f-body">
+          <div id="contact" className="f-body">
             <div className="f-grid">
 
               {/* ── COL 1: Brand ── */}
