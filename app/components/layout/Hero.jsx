@@ -282,7 +282,7 @@ export default function TeckistanHero() {
 href="https://wa.me/923477071276?text=Hello%20Teckistan!%20I%20am%20interested%20in%20your%20web%20design%20services."
 target="_blank" 
 rel="noopener noreferrer"
-className="cta-primary shimmer-btn inline-flex items-center gap-2.5 text-white font-extrabold px-7 py-4 rounded-[13px] relative overflow-hidden"
+className="cta-primary shimmer-btn inline-flex items-center gap-1 text-white font-extrabold px-5 py-4 rounded-[13px] relative overflow-hidden"
 style={{ fontSize: 16 }}
 >
 <Globe size={18} />
