@@ -4,6 +4,7 @@ import TeckistanHero from "./components/layout/Hero";
 import ServicesSection from "./components/layout/Services";
 import PricingSection from "./components/layout/Pricing";
 import PortfolioSection from "./components/layout/Portfolio";
+import Footer from "./components/layout/Footer";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <ServicesSection />
       <PricingSection />
       <PortfolioSection />
+      <Footer />
     </>
   );
 }

@@ -347,7 +347,10 @@ export default function ServicesSection() {
                   </div>
 
                   {/* CTA link */}
-                  <a href="#contact" className="cta-link" style={{ color: accent }}>
+                  <a href="https://wa.me/923477071276?text=Hello%20Teckistan!%20I%20am%20interested%20in%20your%20web%20design%20services."
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     className="cta-link" style={{ color: accent }}>
                     Get Started
                     <ArrowRight size={14} strokeWidth={2.5} />
                   </a>
@@ -373,7 +376,8 @@ export default function ServicesSection() {
               </p>
             </div>
             <a
-              href="#contact"
+           href="https://wa.me/923477071276?text=Hello%20Teckistan!%20I%20am%20interested%20in%20your%20web%20design%20services."
+              target="_blank" 
               className="shrink-0 inline-flex items-center gap-2 bg-white font-bold text-[13.5px] px-6 py-3 rounded-[11px] transition-all duration-200 hover:scale-105 hover:shadow-lg"
               style={{ color: "#036083", boxShadow: "0 2px 12px rgba(0,0,0,.12)" }}
             >

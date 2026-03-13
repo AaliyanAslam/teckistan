@@ -185,7 +185,9 @@ function PricingCard({ plan, index, allCardsRef }) {
       {/* CTA */}
       <a
         ref={btnRef}
-        href="#contact"
+     href={`https://wa.me/923477071276?text=Hello%20Teckistan!%20I%20am%20interested%20in%20the%20${plan.name}%20plan.`}
+        target="_blank"
+        rel="noopener noreferrer"
         style={{ willChange: "transform" }}
         className={`mt-auto text-center py-3 rounded-xl font-semibold text-sm transition-colors duration-200 relative overflow-hidden ${
           plan.popular
@@ -412,7 +414,9 @@ export default function PricingSection() {
 
               {/* CTA */}
               <a
-                href="#contact"
+                href={`https://wa.me/923477071276?text=Hello%20Teckistan!%20I%20am%20interested%20in%20the%20${plan.name}%20plan${plan.features}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`card-btn mt-auto text-center py-3 rounded-xl font-semibold text-sm transition-colors duration-200 ${
                   plan.popular
                     ? "bg-[#137497] text-white hover:bg-[#044f6b]"

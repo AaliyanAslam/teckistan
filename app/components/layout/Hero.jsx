@@ -213,107 +213,7 @@ export default function TeckistanHero() {
         .blink { animation: blink-cur 1s ease infinite; }
       `}</style>
 
-      {/* ════ NAVBAR ══════════════════════════════════ */}
-      <nav
-        ref={navRef}
-        className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300`}
-        style={{
-          height: 68,
-          boxShadow: scrolled ? "0 4px 36px rgba(3,96,131,.13), 0 1px 4px rgba(0,0,0,.05)" : "none",
-          borderBottom: scrolled ? "none" : "1px solid rgba(3,96,131,.08)"
-        }}
-      >
-        <div className="max-w-310 mx-auto h-full px-6 flex items-center justify-between gap-8">
 
-          {/* Logo */}
-          <a ref={logoRef} href="#home" className="flex items-center gap-3 shrink-0">
-            <div className="relative flex items-center justify-center w-9 h-9 rounded-[10px] shrink-0"
-                 style={{ background: "linear-gradient(135deg, #036083 0%, #047fab 100%)" }}>
-              <span className="pulse-ring absolute inset-0 rounded-[10px]" style={{ border: "2px solid rgba(3,96,131,.5)" }} />
-              <Zap size={18} className="text-white relative z-10" fill="white" />
-            </div>
-            <div className="flex flex-col leading-none">
-              <span className="font-black text-[17px] tracking-tight text-gray-900" style={{ letterSpacing: "-0.3px" }}>Teckistan</span>
-              <span className="font-semibold text-[10.5px] tracking-widest uppercase" style={{ color: "#036083", marginTop: 1 }}>Solutions</span>
-            </div>
-          </a>
-
-          {/* Desktop links */}
-          <ul className="hidden lg:flex items-center gap-0.5 list-none m-0 p-0 flex-1 justify-center">
-            {NAV_LINKS.map(({ label, href }, i) => (
-              <li key={label}>
-                <a
-                  ref={el => linksRef.current[i] = el}
-                  href={href}
-                  onClick={() => setActiveLink(label)}
-                  onMouseEnter={() => hoverLink(i, "in")}
-                  onMouseLeave={() => hoverLink(i, "out")}
-                  className={`nav-link relative flex items-center px-4 py-2 rounded-[9px] text-[14.5px] font-bold transition-colors duration-150
-                    ${activeLink === label ? "active-link" : "text-gray-500 hover:text-gray-800 hover:bg-gray-50"}`}
-                >
-                  {label}
-                  <span className="link-dot" />
-                </a>
-              </li>
-            ))}
-          </ul>
-
-          {/* Right */}
-          <div className="flex items-center gap-3 shrink-0">
-            <a
-              ref={ctaRef}
-              href="#contact"
-              onMouseEnter={() => hoverCta("in", ctaRef.current)}
-              onMouseLeave={() => hoverCta("out", ctaRef.current)}
-              className="cta-primary shimmer-btn hidden sm:inline-flex items-center gap-2 text-white font-bold text-[13.5px] px-4 py-2.5 rounded-[10px] relative overflow-hidden"
-            >
-              <Globe size={14} />
-              Get Website
-              <ArrowRight size={13} strokeWidth={2.5} />
-            </a>
-            <button
-              onClick={() => setMenuOpen(o => !o)}
-              className="lg:hidden flex items-center justify-center w-10 h-10 rounded-[9px] border bg-white hover:bg-gray-50 transition-colors cursor-pointer"
-              style={{ borderColor: "rgba(3,96,131,.15)" }}
-            >
-              {menuOpen ? <X size={20} color="#036083" /> : <Menu size={20} color="#374151" />}
-            </button>
-          </div>
-        </div>
-      </nav>
-
-      {/* Overlay */}
-      <div ref={overlayRef} onClick={() => setMenuOpen(false)}
-           className="fixed inset-0 z-40 bg-black/20 backdrop-blur-[2px] lg:hidden" style={{ display: "none" }} />
-
-      {/* Mobile Drawer */}
-      <div ref={drawerRef}
-           className="fixed left-0 right-0 z-50 bg-white flex-col lg:hidden overflow-hidden"
-           style={{ top: 68, display: "none", borderRadius: "0 0 18px 18px", boxShadow: "0 16px 48px rgba(3,96,131,.14)" }}>
-        <ul className="list-none m-0 p-3">
-          {NAV_LINKS.map(({ label, href, icon: Icon }, i) => (
-            <li key={label} ref={el => drawerItems.current[i] = el}>
-              <a href={href} onClick={() => { setActiveLink(label); setMenuOpen(false); }}
-                 className={`drawer-link flex items-center gap-3 px-4 py-3.5 rounded-[11px] font-semibold text-[15px] mb-0.5
-                   ${activeLink === label ? "text-[#036083] bg-[#e0f2f9]" : "text-gray-600"}`}>
-                <span className="flex items-center justify-center w-8 h-8 font-extrabold"
-                      style={{ background: activeLink === label ? "#036083" : "#f3f4f6" }}>
-                  <Icon size={16} color={activeLink === label ? "#fff" : "#6b7280"} strokeWidth={2} />
-                </span>
-                {label}
-                <ChevronRight size={15} className="ml-auto text-gray-300" />
-              </a>
-            </li>
-          ))}
-        </ul>
-        <div ref={el => drawerItems.current[5] = el} className="px-3 pb-4 pt-1">
-          <div className="h-px mb-3" style={{ background: "rgba(3,96,131,.08)" }} />
-          <a href="#contact" onClick={() => setMenuOpen(false)}
-             className="cta-primary shimmer-btn flex items-center justify-center gap-2.5 text-white font-bold text-[15px] py-3.5 rounded-xl relative overflow-hidden">
-            <Globe size={17} /> Get Website <ArrowRight size={16} strokeWidth={2.5} />
-          </a>
-        </div>
-      </div>
 
       {/* ════ HERO ════════════════════════════════════ */}
       <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-white" style={{ paddingTop: 68 }}>
@@ -378,13 +278,17 @@ export default function TeckistanHero() {
 
               {/* CTAs */}
               <div ref={btnsRef} className="flex flex-wrap items-center gap-4 mb-12">
-                <a href="#contact"
-                   className="cta-primary shimmer-btn inline-flex items-center gap-2.5 text-white font-extrabold px-7 py-4 rounded-[13px] relative overflow-hidden"
-                   style={{ fontSize: 16 }}>
-                  <Globe size={18} />
-                  Get Landing Page — $99
-                  <ArrowRight size={16} strokeWidth={2.8} />
-                </a>
+            <a 
+href="https://wa.me/923477071276?text=Hello%20Teckistan!%20I%20am%20interested%20in%20your%20web%20design%20services."
+target="_blank" 
+rel="noopener noreferrer"
+className="cta-primary shimmer-btn inline-flex items-center gap-2.5 text-white font-extrabold px-7 py-4 rounded-[13px] relative overflow-hidden"
+style={{ fontSize: 16 }}
+>
+<Globe size={18} />
+Get Landing Page — 12,000 PKR
+<ArrowRight size={16} strokeWidth={2.8} />
+</a>
                 <a href="#portfolio"
                    className="cta-secondary inline-flex items-center gap-2 font-bold px-6 py-4 rounded-[13px]"
                    style={{ fontSize: 15 }}>

@@ -360,7 +360,9 @@ export default function PortfolioSection() {
                 We've delivered 500+ websites. Yours could be next.
               </p>
             </div>
-            <a href="#contact"
+            <a 
+            target="_blank"
+                href={`https://wa.me/923477071276?text=Hello%20Teckistan!%20I%20am%20interested%20in starting a project.`}
                className="shimmer-btn shrink-0 inline-flex items-center gap-2.5 bg-white font-extrabold text-[14px] px-7 py-3.5 rounded-xl hover:scale-105 transition-transform duration-200"
                style={{ color: "#036083", boxShadow: "0 4px 18px rgba(0,0,0,.15)" }}>
               Start Your Project
