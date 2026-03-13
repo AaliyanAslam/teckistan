@@ -290,7 +290,7 @@ Get Landing Page — 12,000 PKR
 <ArrowRight size={16} strokeWidth={2.8} />
 </a>
                 <a href="#portfolio"
-                   className="cta-secondary inline-flex items-center gap-2 font-bold px-6 py-4 rounded-[13px]"
+                   className="cta-secondary inline-flex items-center gap-2 font-bold px-6 py-3 rounded-[13px]"
                    style={{ fontSize: 15 }}>
                   <Play size={15} fill="#036083" />
                   View Portfolio
